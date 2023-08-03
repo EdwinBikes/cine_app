@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
-class CustomBottomNavBar extends StatelessWidget {
-  const CustomBottomNavBar({super.key});
+class CustomBottomNavigation extends StatelessWidget {
+  const CustomBottomNavigation({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(items: const [
+    return BottomNavigationBar(elevation: 0, items: const [
+      BottomNavigationBarItem(icon: Icon(Icons.home_max), label: 'Inicio'),
       BottomNavigationBarItem(
-          icon: Icon(Icons.accessibility_new), label: "numero 1"),
+          icon: Icon(Icons.label_outline), label: 'Categorías'),
       BottomNavigationBarItem(
-          icon: Icon(Icons.accessible_forward_sharp), label: 'numero 2'),
-      BottomNavigationBarItem(
-          icon: Icon(Icons.favorite_outline_outlined), label: 'Faboritos')
+          icon: Icon(Icons.favorite_outline), label: 'Favoritos'),
     ]);
   }
 }

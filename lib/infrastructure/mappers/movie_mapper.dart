@@ -1,12 +1,12 @@
 import 'package:cine_app/domain/entities/movie.dart';
-import 'package:cine_app/infrastructure/models/moviedb/movie_from_movieDB.dart';
+import 'package:cine_app/infrastructure/models/moviedb/movie_moviedb.dart';
 
-class MovieMApper {
-  static Movie movieDBToEntity(MoviefromMoviedb moviedb) => Movie(
+class MovieMapper {
+  static Movie movieDBToEntity(MovieMovieDB moviedb) => Movie(
       adult: moviedb.adult,
       backdropPath: (moviedb.backdropPath != '')
           ? 'https://image.tmdb.org/t/p/w500${moviedb.backdropPath}'
-          : 'https://www.ormistonhospital.co.nz/wp-content/uploads/2016/05/No-Image.jpg',
+          : 'https://sd.keepcalms.com/i-w600/keep-calm-poster-not-found.jpg',
       genreIds: moviedb.genreIds.map((e) => e.toString()).toList(),
       id: moviedb.id,
       originalLanguage: moviedb.originalLanguage,

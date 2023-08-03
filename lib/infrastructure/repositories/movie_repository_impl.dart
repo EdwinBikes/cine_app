@@ -1,13 +1,28 @@
+import 'package:cine_app/domain/datasources/movies_datasources.dart';
 import 'package:cine_app/domain/entities/movie.dart';
-import 'package:cine_app/infrastructure/datasources/moviedb_datasource.dart';
+import 'package:cine_app/domain/repositories/movies_repository.dart';
 
-import '../../domain/repositories/movies_repository.dart';
+class MovieRepositoryImpl extends MoviesRepository {
+  final MoviesDatasource datasource;
+  MovieRepositoryImpl(this.datasource);
 
-class MoviesRepositoryImpl extends MoviesRepository {
-  final MoviedbDataSourse datasource;
-  MoviesRepositoryImpl(this.datasource);
   @override
   Future<List<Movie>> getNowPlaying({int page = 1}) {
     return datasource.getNowPlaying(page: page);
+  }
+
+  @override
+  Future<List<Movie>> getPopular({int page = 2}) {
+    return datasource.getPopular(page: page);
+  }
+
+  @override
+  Future<List<Movie>> getTopRated({int page = 1}) {
+    return datasource.getTopRated(page: page);
+  }
+
+  @override
+  Future<List<Movie>> getUpcoming({int page = 1}) {
+    return datasource.getUpcoming(page: page);
   }
 }
