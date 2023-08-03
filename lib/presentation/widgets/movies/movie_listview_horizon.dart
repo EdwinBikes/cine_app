@@ -51,6 +51,7 @@ class _MovieLisviewHorizonState extends State<MovieLisviewHorizon> {
         children: [
           if (widget.title != null || widget.subTitle != null)
             _Title(title: widget.title, subTitle: widget.subTitle),
+          const SizedBox(height: 6),
           Expanded(
               child: ListView.builder(
             controller: scrollController,
