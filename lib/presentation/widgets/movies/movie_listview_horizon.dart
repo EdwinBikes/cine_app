@@ -46,7 +46,7 @@ class _MovieLisviewHorizonState extends State<MovieLisviewHorizon> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 350,
+      height: 360,
       child: Column(
         children: [
           if (widget.title != null || widget.subTitle != null)
@@ -61,7 +61,7 @@ class _MovieLisviewHorizonState extends State<MovieLisviewHorizon> {
             itemBuilder: (context, index) {
               return FadeInRight(child: _Slide(movie: widget.movies[index]));
             },
-          ))
+          )),
         ],
       ),
     );
@@ -76,9 +76,10 @@ class _Slide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textStyles = Theme.of(context).textTheme;
+    const textTitle = TextStyle(fontSize: 13, fontWeight: FontWeight.bold);
 
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 8),
+      margin: const EdgeInsets.symmetric(horizontal: 9),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -110,11 +111,7 @@ class _Slide extends StatelessWidget {
           //* Title
           SizedBox(
             width: 150,
-            child: Text(
-              movie.title,
-              maxLines: 2,
-              style: textStyles.titleSmall,
-            ),
+            child: Text(movie.title, maxLines: 2, style: textTitle),
           ),
 
           //* Rating
@@ -128,11 +125,19 @@ class _Slide extends StatelessWidget {
                     style: textStyles.bodyMedium
                         ?.copyWith(color: Colors.yellow.shade800)),
                 const Spacer(),
-                Text(HumanFormats.number(movie.popularity),
-                    style: textStyles.bodySmall),
+                Column(
+                  children: [
+                    const Text(
+                      "votos",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                    Text(HumanFormats.number(movie.popularity),
+                        style: const TextStyle(fontSize: 11)),
+                  ],
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
