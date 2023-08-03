@@ -10,8 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: _HomeView(),
-    );
+        body: _HomeView(), bottomNavigationBar: CustomBottomNavBar());
   }
 }
 
@@ -25,7 +24,6 @@ class _HomeView extends ConsumerStatefulWidget {
 class _HomeViewState extends ConsumerState<_HomeView> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     ref.read(nowPlayingMoviesProvider.notifier).loadNextPage();
   }
