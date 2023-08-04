@@ -7,7 +7,7 @@ class ActorMapper {
         name: cast.name,
         profilePath: cast.profilePath != null
             ? 'https://image.tmdb.org/t/p/w500${cast.profilePath}'
-            : 'https://sd.keepcalms.com/i-w600/keep-calm-poster-not-found.jpg',
+            : 'https://img.freepik.com/fotos-premium/persona-desconocida-silueta-masculina_68747-222.jpg',
         character: cast.character,
       );
 }

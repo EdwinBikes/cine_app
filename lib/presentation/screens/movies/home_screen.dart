@@ -64,14 +64,14 @@ class _HomeViewState extends ConsumerState<_HomeView> {
             MovieLisviewHorizon(
                 movies: nowPlayingMovies,
                 title: 'En cines',
-                subTitle: 'Estreno',
+                subTitle: 'Lunes 20',
                 loadNextPage: () =>
                     ref.read(nowPlayingMoviesProvider.notifier).loadNextPage()),
 
             MovieLisviewHorizon(
                 movies: upcomingMovies,
                 title: 'Próximamente',
-                subTitle: 'Este mes',
+                subTitle: 'En este mes',
                 loadNextPage: () =>
                     ref.read(upcomingMoviesProvider.notifier).loadNextPage()),
 
