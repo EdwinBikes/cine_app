@@ -47,12 +47,11 @@ class _MovieLisviewHorizonState extends State<MovieLisviewHorizon> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 360,
+      height: 350,
       child: Column(
         children: [
           if (widget.title != null || widget.subTitle != null)
             _Title(title: widget.title, subTitle: widget.subTitle),
-          const SizedBox(height: 6),
           Expanded(
               child: ListView.builder(
             controller: scrollController,
@@ -62,7 +61,7 @@ class _MovieLisviewHorizonState extends State<MovieLisviewHorizon> {
             itemBuilder: (context, index) {
               return FadeInRight(child: _Slide(movie: widget.movies[index]));
             },
-          )),
+          ))
         ],
       ),
     );
@@ -77,10 +76,9 @@ class _Slide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textStyles = Theme.of(context).textTheme;
-    const textTitle = TextStyle(fontSize: 13, fontWeight: FontWeight.bold);
 
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 9),
+      margin: const EdgeInsets.symmetric(horizontal: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -115,7 +113,11 @@ class _Slide extends StatelessWidget {
           //* Title
           SizedBox(
             width: 150,
-            child: Text(movie.title, maxLines: 2, style: textTitle),
+            child: Text(
+              movie.title,
+              maxLines: 2,
+              style: textStyles.titleSmall,
+            ),
           ),
 
           //* Rating
@@ -129,19 +131,11 @@ class _Slide extends StatelessWidget {
                     style: textStyles.bodyMedium
                         ?.copyWith(color: Colors.yellow.shade800)),
                 const Spacer(),
-                Column(
-                  children: [
-                    const Text(
-                      "votos",
-                      style: TextStyle(fontSize: 10),
-                    ),
-                    Text(HumanFormats.number(movie.popularity),
-                        style: const TextStyle(fontSize: 11)),
-                  ],
-                ),
+                Text(HumanFormats.number(movie.popularity),
+                    style: textStyles.bodySmall),
               ],
             ),
-          ),
+          )
         ],
       ),
     );
