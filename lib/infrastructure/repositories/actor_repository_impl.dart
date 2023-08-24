@@ -1,4 +1,4 @@
-import 'package:cine_app/domain/domain.dart';
+import 'package:cine_app/links_export.dart';
 
 class ActorRepositoryImpl extends ActorsRepository {
   final ActorsDatasource datasource;

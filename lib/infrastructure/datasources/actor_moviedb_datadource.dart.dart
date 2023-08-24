@@ -1,6 +1,4 @@
-import 'package:cine_app/config/constants/environment.dart';
-import 'package:cine_app/domain/domain.dart';
-import 'package:cine_app/infrastructure/infrastructure.dart';
+import 'package:cine_app/links_export.dart';
 import 'package:dio/dio.dart';
 
 class ActorMovieDbDatasource extends ActorsDatasource {

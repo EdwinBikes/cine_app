@@ -1,5 +1,4 @@
-import 'package:cine_app/domain/entities/actors.dart';
-import 'package:cine_app/infrastructure/models/moviedb/credits_response.dart';
+import 'package:cine_app/links_export.dart';
 
 class ActorMapper {
   static Actors castToEntity(Cast cast) => Actors(

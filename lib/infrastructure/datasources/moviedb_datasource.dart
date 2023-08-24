@@ -1,9 +1,4 @@
-import 'package:cine_app/config/constants/environment.dart';
-import 'package:cine_app/domain/datasources/movies_datasources.dart';
-import 'package:cine_app/domain/entities/movie.dart';
-import 'package:cine_app/infrastructure/mappers/movie_mapper.dart';
-import 'package:cine_app/infrastructure/models/moviedb/movie_details.dart';
-import 'package:cine_app/infrastructure/models/moviedb/moviedb_response.dart';
+import 'package:cine_app/links_export.dart';
 import 'package:dio/dio.dart';
 
 class MoviedbDatasource extends MoviesDatasource {

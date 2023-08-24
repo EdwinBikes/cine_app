@@ -1,6 +1,4 @@
-import 'package:cine_app/domain/entities/movie.dart';
-import 'package:cine_app/infrastructure/models/moviedb/movie_details.dart';
-import 'package:cine_app/infrastructure/models/moviedb/movie_moviedb.dart';
+import 'package:cine_app/links_export.dart';
 
 class MovieMapper {
   static Movie movieDBToEntity(MovieMovieDB moviedb) => Movie(

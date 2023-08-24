@@ -1,7 +1,5 @@
-import 'package:cine_app/domain/entities/movie.dart';
+import 'package:cine_app/links_export.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'movies_providers.dart';
 
 final moviesSlideshowProvider = Provider<List<Movie>>((ref) {
   final nowPlayingMovies = ref.watch(nowPlayingMoviesProvider);

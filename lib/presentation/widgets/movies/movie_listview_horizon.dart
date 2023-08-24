@@ -1,16 +1,15 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:cine_app/config/helpers/human_formats.dart';
-import 'package:cine_app/domain/entities/movie.dart';
+import 'package:cine_app/links_export.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class MovieLisviewHorizon extends StatefulWidget {
+class MovieHorizontalListview extends StatefulWidget {
   final List<Movie> movies;
   final String? title;
   final String? subTitle;
   final VoidCallback? loadNextPage;
 
-  const MovieLisviewHorizon(
+  const MovieHorizontalListview(
       {super.key,
       required this.movies,
       this.title,
@@ -18,10 +17,11 @@ class MovieLisviewHorizon extends StatefulWidget {
       this.loadNextPage});
 
   @override
-  State<MovieLisviewHorizon> createState() => _MovieLisviewHorizonState();
+  State<MovieHorizontalListview> createState() =>
+      _MovieHorizontalListviewState();
 }
 
-class _MovieLisviewHorizonState extends State<MovieLisviewHorizon> {
+class _MovieHorizontalListviewState extends State<MovieHorizontalListview> {
   final scrollController = ScrollController();
 
   @override
@@ -100,7 +100,7 @@ class _Slide extends StatelessWidget {
                     );
                   }
                   return GestureDetector(
-                    onTap: () => context.push('/movie/${movie.id}'),
+                    onTap: () => context.push('/home/0/movie/${movie.id}'),
                     child: FadeIn(child: child),
                   );
                 },

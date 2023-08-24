@@ -1,6 +1,4 @@
-import 'package:cine_app/domain/datasources/movies_datasources.dart';
-import 'package:cine_app/domain/entities/movie.dart';
-import 'package:cine_app/domain/repositories/movies_repository.dart';
+import 'package:cine_app/links_export.dart';
 
 class MovieRepositoryImpl extends MoviesRepository {
   final MoviesDatasource datasource;

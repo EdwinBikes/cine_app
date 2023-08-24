@@ -1,5 +1,4 @@
-import 'package:cine_app/infrastructure/datasources/moviedb_datasource.dart';
-import 'package:cine_app/infrastructure/repositories/movie_repository_impl.dart';
+import 'package:cine_app/links_export.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // Este repositorio es inmutable

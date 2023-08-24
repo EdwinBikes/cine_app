@@ -1,8 +1,7 @@
 import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
-import 'package:cine_app/config/helpers/human_formats.dart';
-import 'package:cine_app/domain/domain.dart';
+import 'package:cine_app/links_export.dart';
 import 'package:flutter/material.dart';
 
 typedef SearchMoviesCallback = Future<List<Movie>> Function(String query);

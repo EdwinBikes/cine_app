@@ -1,5 +1,4 @@
-import 'package:cine_app/domain/domain.dart';
-import 'package:cine_app/presentation/providers/actors/actors_repository_provider.dart';
+import 'package:cine_app/links_export.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final actorsByMovieProvider =

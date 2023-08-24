@@ -1,6 +1,5 @@
-import 'package:cine_app/domain/domain.dart';
-import 'package:cine_app/presentation/delegates/search_movie_delegates.dart';
-import 'package:cine_app/presentation/providers/providers.dart';
+import 'package:cine_app/links_export.dart';
+import 'package:cine_app/presentation/providers/search/search_movies_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -23,7 +22,7 @@ class CustomAppbar extends ConsumerWidget {
               children: [
                 Icon(Icons.movie_outlined, color: colors.primary),
                 const SizedBox(width: 5),
-                Text('CineBikes', style: titleStyle),
+                Text('Cinemapedia', style: titleStyle),
                 const Spacer(),
                 IconButton(
                     onPressed: () {
@@ -41,7 +40,7 @@ class CustomAppbar extends ConsumerWidget {
                           .then((movie) {
                         if (movie == null) return;
 
-                        context.push('/movie/${movie.id}');
+                        context.push('/home/0/movie/${movie.id}');
                       });
                     },
                     icon: const Icon(Icons.search))
