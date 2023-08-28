@@ -1,6 +1,6 @@
 .env
 .vscode
-
+cine-bikes-key.jks
 # Miscellaneous
 *.class
 *.log

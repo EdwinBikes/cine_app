@@ -139,7 +139,7 @@ class BelongsToCollection {
         id: json["id"],
         name: json["name"],
         posterPath: json["poster_path"] ?? '',
-        backdropPath: json["backdrop_path"],
+        backdropPath: json["backdrop_path"] ?? '',
       );
 
   Map<String, dynamic> toJson() => {
@@ -181,7 +181,7 @@ class ProductionCompany {
   final int id;
   final String? logoPath;
   final String name;
-  final String originCountry;
+  final String? originCountry;
 
   factory ProductionCompany.fromJson(Map<String, dynamic> json) =>
       ProductionCompany(

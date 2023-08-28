@@ -1,5 +1,5 @@
 import 'package:cine_app/links_export.dart';
 
 abstract class ActorsRepository {
-  Future<List<Actors>> getActorsByMovie(String movieId);
+  Future<List<Actor>> getActorsByMovie(String movieId);
 }

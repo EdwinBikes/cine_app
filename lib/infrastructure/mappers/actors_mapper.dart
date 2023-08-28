@@ -1,7 +1,7 @@
 import 'package:cine_app/links_export.dart';
 
 class ActorMapper {
-  static Actors castToEntity(Cast cast) => Actors(
+  static Actor castToEntity(Cast cast) => Actor(
         id: cast.id,
         name: cast.name,
         profilePath: cast.profilePath != null

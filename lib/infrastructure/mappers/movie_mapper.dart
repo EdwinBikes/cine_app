@@ -5,7 +5,7 @@ class MovieMapper {
       adult: moviedb.adult,
       backdropPath: (moviedb.backdropPath != '')
           ? 'https://image.tmdb.org/t/p/w500${moviedb.backdropPath}'
-          : 'https://sd.keepcalms.com/i-w600/keep-calm-poster-not-found.jpg',
+          : 'https://t4.ftcdn.net/jpg/01/13/46/21/360_F_113462123_n9fPVrYHbfzjua7uuf0tXkwCOELtn64R.jpg',
       genreIds: moviedb.genreIds.map((e) => e.toString()).toList(),
       id: moviedb.id,
       originalLanguage: moviedb.originalLanguage,
@@ -14,7 +14,7 @@ class MovieMapper {
       popularity: moviedb.popularity,
       posterPath: (moviedb.posterPath != '')
           ? 'https://image.tmdb.org/t/p/w500${moviedb.posterPath}'
-          : 'https://www.movienewz.com/img/films/poster-holder.jpg',
+          : 'https://t3.ftcdn.net/jpg/05/03/24/40/360_F_503244059_fRjgerSXBfOYZqTpei4oqyEpQrhbpOML.jpg',
       releaseDate: moviedb.releaseDate ?? DateTime.now(),
       title: moviedb.title,
       video: moviedb.video,

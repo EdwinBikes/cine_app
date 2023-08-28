@@ -1,5 +1,6 @@
 import 'package:cine_app/links_export.dart';
 import 'package:isar/isar.dart';
+import 'package:path_provider/path_provider.dart';
 
 class IsarDatasource extends LocalStorageDatasource {
   late Future<Isar> db;
@@ -9,8 +10,13 @@ class IsarDatasource extends LocalStorageDatasource {
   }
 
   Future<Isar> openDB() async {
+    final dir = await getApplicationDocumentsDirectory();
     if (Isar.instanceNames.isEmpty) {
-      return await Isar.open([MovieSchema], inspector: true, directory: '');
+      return await Isar.open(
+        [MovieSchema],
+        inspector: true,
+        directory: dir.path,
+      );
     }
 
     return Future.value(Isar.getInstance());
